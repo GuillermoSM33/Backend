@@ -135,3 +135,4 @@ C:\Users\guill\OneDrive\Desktop\DotNet\backend\obj\Debug\net8.0\refint\backend.d
 C:\Users\guill\OneDrive\Desktop\DotNet\backend\obj\Debug\net8.0\backend.pdb
 C:\Users\guill\OneDrive\Desktop\DotNet\backend\obj\Debug\net8.0\backend.genruntimeconfig.cache
 C:\Users\guill\OneDrive\Desktop\DotNet\backend\obj\Debug\net8.0\ref\backend.dll
+C:\Users\guill\OneDrive\Desktop\DotNet\backend\obj\Debug\net8.0\backend.sourcelink.json

@@ -1,7 +1,9 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using backend.Models; 
+using Microsoft.EntityFrameworkCore; 
 
-namespace backend.Controllers // Cambia a un espacio de nombres adecuado
+namespace backend.Controllers 
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -49,42 +51,3 @@ namespace backend.Controllers // Cambia a un espacio de nombres adecuado
     }
 }
 
-{
-    [Route("api/[controller]")]
-    [ApiController]
-    public class UsuariosController : ControllerBase
-    {
-        // GET: api/<UsuariosController>
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<Usuario>>> Get(UsuariosContext db)
-        {
-            var usuarios = await db.Usuarios.ToListAsync();
-            return Ok(usuarios);  
-        }
-
-        // GET api/<UsuariosController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/<UsuariosController>
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT api/<UsuariosController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<UsuariosController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
-    }
-}

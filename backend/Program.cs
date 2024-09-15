@@ -1,16 +1,33 @@
-using backend.Models;  
-
+using backend.Models; 
 using Microsoft.EntityFrameworkCore;
+/* using backend.Controllers; */
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Configurar el contexto de base de datos
 builder.Services.AddDbContext<UsuariosContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
 var app = builder.Build();
 
-// GET: Obtener todos los usuarios
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseHttpsRedirection();
+
+app.UseAuthorization();
+
+app.MapControllers();
+
+//Esta parte del código es la que se encarga de manejar las peticiones HTTP sin necesidad de crear un controlador
+
+/* // GET: Obtener todos los usuarios
 app.MapGet("/usuarios", async (UsuariosContext db) =>
 {
     return await db.Usuarios.ToListAsync();
@@ -49,6 +66,6 @@ app.MapDelete("/usuarios/{id}", async (int id, UsuariosContext db) =>
     db.Usuarios.Remove(usuario);
     await db.SaveChangesAsync();
     return Results.NoContent();
-});
+}); */
 
 app.Run();
