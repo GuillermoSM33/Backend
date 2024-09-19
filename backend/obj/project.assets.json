@@ -4804,11 +4804,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\guill\\OneDrive\\Desktop\\DotNet\\backend\\backend.csproj",
+      "projectUniqueName": "C:\\Users\\guill\\Desktop\\DotNet\\backend\\backend\\backend.csproj",
       "projectName": "backend",
-      "projectPath": "C:\\Users\\guill\\OneDrive\\Desktop\\DotNet\\backend\\backend.csproj",
+      "projectPath": "C:\\Users\\guill\\Desktop\\DotNet\\backend\\backend\\backend.csproj",
       "packagesPath": "C:\\Users\\guill\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\guill\\OneDrive\\Desktop\\DotNet\\backend\\obj\\",
+      "outputPath": "C:\\Users\\guill\\Desktop\\DotNet\\backend\\backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\guill\\AppData\\Roaming\\NuGet\\NuGet.Config"

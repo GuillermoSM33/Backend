@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6cbuhXuL9OY=",
+  "dgSpecHash": "i/LyRWWlPn0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\guill\\OneDrive\\Desktop\\DotNet\\backend\\backend.csproj",
+  "projectFilePath": "C:\\Users\\guill\\Desktop\\DotNet\\Backend\\backend\\backend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\guill\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\guill\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
