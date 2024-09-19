@@ -37,21 +37,18 @@ namespace backend.Controllers
         {
             if (nuevoUsuario == null)
             {
-                return BadRequest("El usuario no puede ser nulo.");
+                return BadRequest(new { error = "El usuario no puede ser nulo." });
             }
 
             try
             {
-                using (var db = new UsuariosContext())
-                {
-                    db.Usuarios.Add(nuevoUsuario);
-                    await db.SaveChangesAsync();
-                }
-                return Ok("Usuario agregado exitosamente");
+                _context.Usuarios.Add(nuevoUsuario);
+                await _context.SaveChangesAsync();
+                return Ok(new { message = "Usuario agregado exitosamente" });
             }
             catch (Exception ex)
             {
-                return StatusCode(500, $"Hubo un error al agregar el usuario: {ex.Message}");
+                return StatusCode(500, new { error = $"Hubo un error al agregar el usuario: {ex.Message}" });
             }
         }
 

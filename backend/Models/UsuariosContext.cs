@@ -26,7 +26,7 @@ public partial class UsuariosContext : DbContext
         {
             entity.ToTable("usuarios");
 
-            entity.Property(e => e.EsEstudiante).HasColumnName("esEstudiante");
+            entity.Property(e => e.EsEstudiante).HasColumnName("es_Estudiante");
             entity.Property(e => e.Nombre).HasMaxLength(100);
         });
 
