@@ -33,8 +33,26 @@ namespace backend.Controllers
 
         // POST api/usuarios
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<IActionResult> Post([FromBody] Usuario nuevoUsuario)
         {
+            if (nuevoUsuario == null)
+            {
+                return BadRequest("El usuario no puede ser nulo.");
+            }
+
+            try
+            {
+                using (var db = new UsuariosContext())
+                {
+                    db.Usuarios.Add(nuevoUsuario);
+                    await db.SaveChangesAsync();
+                }
+                return Ok("Usuario agregado exitosamente");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Hubo un error al agregar el usuario: {ex.Message}");
+            }
         }
 
         // PUT api/usuarios/5
